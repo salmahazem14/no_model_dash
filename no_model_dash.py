@@ -17,6 +17,7 @@ from dash import Dash, html
 
 
 app = Dash(__name__)
+server=app.server
 
 app.layout = html.H1("Hi! This is a test")
 
