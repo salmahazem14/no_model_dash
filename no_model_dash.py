@@ -968,7 +968,7 @@ def update_pie_on_hover(hoverData):
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 8050))  # Railway will set this
-    app.run_server(host="0.0.0.0", port=port, debug=True)
+    app.run(host="0.0.0.0", port=port, debug=True)
 
 
 # In[ ]:
