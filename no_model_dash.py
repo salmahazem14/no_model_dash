@@ -215,26 +215,13 @@ df.columns
 # In[129]:
 
 
-df["medical_specialty"].replace("?", "Unknown", inplace=True)
-
-
-# In[130]:
-
-
-df['payer_code'].replace('?', 'Unknown', inplace=True)
-
-
-# In[131]:
-
-
-df["race"].replace("?", "Unknown", inplace=True)
-
-
-# In[132]:
-
-
+df["medical_specialty"] = df["medical_specialty"].replace("?", "Unknown")
+df['payer_code'] = df['payer_code'].replace('?', 'Unknown')
+df['weight'] = df['weight'].replace('?', 'Unknown')
+df["race"] = df["race"].replace("?", "Unknown")
 for col in ["diag_1", "diag_2", "diag_3"]:
-    df[col].replace("?", "Unknown", inplace=True)
+    df[col] = df[col].replace("?", "Unknown")
+
 
 
 # In[133]:
