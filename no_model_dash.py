@@ -179,9 +179,6 @@ df.columns
 # In[123]:
 
 
-import nbformat
-print(nbformat.__version__)
-
 
 # In[124]:
 
