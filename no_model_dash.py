@@ -11,6 +11,7 @@ import matplotlib as mpl
 import seaborn as sns
 import plotly.graph_objects as go
 from dash import Dash, html
+import os
 
 
 # In[97]:
@@ -964,8 +965,10 @@ def update_pie_on_hover(hoverData):
 
     return create_pie_chart(pull, opacity)
 
+
 if __name__ == "__main__":
-    app.run(debug=True)
+    port = int(os.environ.get("PORT", 8050))  # Railway will set this
+    app.run_server(host="0.0.0.0", port=port, debug=True)
 
 
 # In[ ]:
